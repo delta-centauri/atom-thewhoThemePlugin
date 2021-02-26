@@ -1,0 +1,194 @@
+@topBarButtonHoverColor: @black;
+
+#top-bar {
+  background-color: @black;
+  color: red;
+  border: none;
+}
+#top-bar li a {
+  color: @dtGray3;
+}
+#top-bar li a:active, 
+#top-bar li a:hover {
+  color: @white !important;
+  text-decoration: none !important;
+}
+#top-bar li a:active {
+  font-weight: bold;
+}
+#top-bar li.active {
+  font-weight: bold;
+}
+#top-bar li.active a, #top-bar li.active a:hover, 
+#top-bar li.active a:active {
+  color: @white;
+}
+#top-bar li.active a
+#top-bar li.active a:active {
+  font-weight: bold;
+}
+#browse-menu { padding-left: 10px; }
+header #logo {
+ padding: 2px 3px 0 3px;
+ color:white;
+ font-weight: bold;
+ font-size:14px;
+ text-transform: uppercase;
+}
+
+
+#site-name {
+  margin: 0 0 0 0;
+  padding: 9px 0 10px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+#site-name a {
+  color:@white;
+}
+#site-slogan {
+  margin-bottom: 16px;
+  height: 26px;
+  background: @white;
+  color: @grayDark;  
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid @dtGray4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#site-slogan span {
+  line-height: 26px;
+  font-weight: normal;
+}
+.top-item {
+  background-color: @black;
+  font-size: 14px;
+}
+.top-dropdown,
+button.top-dropdown:link,
+button.top-dropdown:visited,
+button.top-dropdown:active {
+  color: @dtGray4;
+}
+
+
+
+// Menu 
+#browse-menu {
+  > button {
+    background-color: @grayDark;
+  }
+}
+#user-menu {
+  > button {
+    background-color: @grayDark;
+  }
+}
+
+
+// Icons
+#quick-links-menu,
+#language-menu,
+#admin-menu,
+#import-menu,
+#manage-menu,
+#add-menu,
+#clipboard-menu {
+
+  > button:before {
+    color: @dtGray4;
+  }
+
+  &.open,
+  > button:hover {
+    background-color: transparent;
+  }
+
+  &.open,
+  > button:focus {
+    /*background-color: @redDtLight;*/
+  }
+
+  &.open > button:before,
+  > button:hover:before {
+    color: @dtGray2;
+  }
+}
+
+// search
+#search-bar #search-form-wrapper input {
+  background-color: @dtGray4;
+  color: @grayDark;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#search-bar #search-form-wrapper button {
+  background-color: @dtGray4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#search-bar #search-form-wrapper button:before {
+  color: @dtGray2;
+}
+.search-popover {border:none;}
+
+
+/* buttons top, like "Browse" and "Log in" */
+.open > button.top-dropdown,
+button.top-dropdown:hover {
+  background-color: transparent;
+  background-image: url(../../images/gray-arrow.png);
+  color: @dtGray2;
+}
+.open > button.top-dropdown,
+button.top-dropdown:focus {
+  /*background-color: @dtRedLight !important;*/
+  background-image: url(../../images/gray-arrow.png);
+  color: @dtGray2;
+  font-weight: bold;
+}
+
+.top-dropdown-container .top-dropdown-body,
+.top-dropdown-container .top-dropdown-bottom,
+.top-dropdown-container .top-dropdown-body label {
+  /*font-size: 14px;*/
+  background-color:@grayDark;
+}
+.top-dropdown-container .top-dropdown-header {
+  border-bottom: none;
+  background-color:@grayDark;
+  padding:0 8px 4px 8px;
+}
+.top-dropdown-container .top-dropdown-arrow .arrow {display: none;}
+.top-dropdown-container .top-dropdown-body ul a {
+  padding: 2px 8px;
+}
+/* login */
+
+#user-menu button[type=submit] {
+  padding: 3px 8px;
+  background-color: @grayLight;
+  color: @white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  &:hover {
+    background-color: @gray;
+    color: @white;
+  }
+  &:active {
+    background-color: @gray;
+    color: @white;
+  }
+  &:focus {
+    background-color: @gray;
+    color: @white;
+  }
+}
+
+
+@media (max-width: 979px) {
+  nav { clear: none; }
+  header #logo {  }
+  #browse-menu { padding-left: 0; }
+}
