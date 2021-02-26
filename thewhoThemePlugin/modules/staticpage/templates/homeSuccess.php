@@ -25,7 +25,7 @@
 
 <?php slot('sidebar') ?>
 
-  <?php echo get_component('menu', 'staticPagesMenu') ?>
+  <?php include_slot('browseby_thewho') ?>
 
   <section>
     <?php echo get_component('term', 'treeView', array('resource' => QubitTaxonomy::getById(QubitTaxonomy::SUBJECT_ID))) ?>

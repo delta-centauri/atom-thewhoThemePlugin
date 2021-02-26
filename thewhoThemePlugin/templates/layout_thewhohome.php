@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php $maintenance_mode = 1; ?>
+<?php $maintenance_mode = 0; ?>
 
 <html lang="<?php echo $sf_user->getCulture() ?>" dir="<?php echo sfCultureInfo::getInstance($sf_user->getCulture())->direction ?>">
   <head>
@@ -26,6 +26,8 @@
 
     <?php include_slot('pre') ?>
 
+
+
     <?php if ($maintenance_mode) { ?>
     <div style="text-align:center;color:red;padding:10px;">
     short maintenance break. some parts of the website might currently look ugly or not work at all.
@@ -38,7 +40,7 @@
 
       <?php echo get_component('default', 'alerts') ?>
 
-      <?php include_slot('browseby_thewho') ?>
+      
 
       <div class="row">
 
