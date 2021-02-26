@@ -5,8 +5,8 @@
     <b><?php echo __('Browse by') ?>:&nbsp;&nbsp;</b>
     <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
     <?php if ($browseMenu->hasChildren()): ?>
-      <?php
-      $counter = 1;
+      <?php 
+      $counter = 1; 
       $totalcounts = count($browseMenu->getChildren());
       ?>
       <?php foreach ($browseMenu->getChildren() as $item): ?>
@@ -21,17 +21,26 @@
   <h1><?php echo render_title($resource->getTitle(array('cultureFallback' => true))) ?></h1>
 <?php end_slot() ?>
 
-  <?php
-  /*echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture()))
-  */
-  ?>
+
+
+<?php slot('sidebar') ?>
+
+  <?php echo get_component('menu', 'staticPagesMenu') ?>
+
+  <section>
+    <?php echo get_component('term', 'treeView', array('resource' => QubitTaxonomy::getById(QubitTaxonomy::SUBJECT_ID))) ?>
+  </section>
+
+<?php end_slot() ?>
 
 
 
 
 
-<?php echo render_value_html($sf_data->getRaw('content')) ?>
 
+<div class="page">
+  <?php echo render_value_html($sf_data->getRaw('content')) ?>
+</div>
 
 <?php if (QubitAcl::check($resource, 'update')) { ?>
   <?php slot('after-content') ?>
