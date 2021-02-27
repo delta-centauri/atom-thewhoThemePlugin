@@ -26,6 +26,7 @@ class TermTreeViewComponent extends sfComponent
     { 
       $this->resource = $request->getAttribute('sf_route')->resource;
     }
+
     /* *************************** end edit */
     
     // Number of siblings that we are showing above and below the current node
@@ -34,22 +35,30 @@ class TermTreeViewComponent extends sfComponent
 
     if ($this->resource instanceof QubitTaxonomy)
     {
+      // immer
       $criteria = new Criteria;
       $criteria->add(QubitTerm::TAXONOMY_ID, $this->resource->id);
       $criteria->add(QubitTerm::PARENT_ID, QubitTerm::ROOT_ID);
       $criteria->addAscendingOrderByColumn('name');
       $criteria = QubitCultureFallback::addFallbackCriteria($criteria, 'QubitTerm');
 
+      
+
       // Get first top level term if we are in a taxonomy page
+
       $this->resource = QubitTerm::getOne($criteria);
 
       // Get more siblings and no childrens
-      $numberOfPreviousOrNextSiblings = 11;
+      $numberOfPreviousOrNextSiblings = 30;
       $this->getChildrensAndShowActive = false;
+
+
     }
 
     if (isset($this->resource))
     {
+      
+      // immer
       $this->ancestors = $this->resource->getAncestors()->orderBy('lft');
 
       $this->browser = isset($this->browser) && true === $this->browser;

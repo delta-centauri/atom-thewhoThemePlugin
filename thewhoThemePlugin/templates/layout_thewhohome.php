@@ -17,6 +17,17 @@
       </script>
     <?php endif; ?>
     <?php include_javascripts() ?>
+
+
+
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery("#treeview .ancestor").addClass("expand").removeClass("ancestor");
+      })
+    </script>
+
+    
+
   </head>
   <body class="yui-skin-sam <?php echo $sf_context->getModuleName() ?> <?php echo $sf_context->getActionName() ?>">
 

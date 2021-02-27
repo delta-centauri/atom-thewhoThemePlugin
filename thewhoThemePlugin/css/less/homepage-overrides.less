@@ -23,11 +23,11 @@ body.home #wrapper {
 body.home #wrapper a { color:@dtRedLight; }
 body.home #wrapper a:hover { color:@dtRedLessLight; }
 
-/*@media (min-width:769px) {
-  body.home #wrapper { 
-    width:50%;
+@media (max-width:768px) {
+  #browse_by_homepage #treeview { 
+    display: none;
   }
-}*/
+}
 h1, h2 {
 }
 h1,h2,h3 { line-height: 28px; }
@@ -517,20 +517,48 @@ button.clipboard-wide {
 
 
 /* homepage */
+body.home .page {
+  margin: 0;
+}
 .page h3 {
-        margin-top:30px;
+  margin-top:30px;
 }
 /* archival description main page */
 #facets .content { display:none !important; }
 
-#browse_by_homepage {
-  padding: 20px 0 10px 0;
-  text-align: center;
-  border-bottom: 1px solid gray;
-  font-size: 16px;
+body.home #sidebar {
+  background-color: rgba(0,0,0,0.6);
+  margin: 15px 0 10px 0;
+  padding: 15px 15px 5px 15px;
+}
+#treeview-header p {
+  text-transform: none;
+  font-variant: normal;
+  font-size: unset;
 }
 
-
+body.home #sidebar #treeview-header {
+  display: none;
+}
+/*
+body.home #sidebar #treeview-header p {
+  padding: 0;
+  color: unset;
+  background-color: unset;
+}*/
+body.home #sidebar #treeview {
+  background-color: unset;
+}
+body.home #sidebar #treeview .ancestor {
+  background-color: @black;
+}
+body.home #sidebar #treeview .active {
+  background-color: unset !important;
+}
+body.home #sidebar #treeview .more a {
+  background-color: @black;
+  border:1px solid;
+}
 
 .list-menu ul {background-color: transparent;}
 .list-menu ul a:hover {background-color: transparent;}
