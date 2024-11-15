@@ -1,6 +1,6 @@
 <footer>
    <div>
-     <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. | Contact: <a href="mailto:roger.rutishauser@docuteam.ch">roger.rutishauser@docuteam.ch</a></p>
+     <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. | Contact: <a href="mailto:roger.rutishauser@gmail.com">roger.rutishauser@gmail.com</a></p>
    </div>
 
   <?php if (QubitAcl::check('userInterface', 'translate')): ?>
